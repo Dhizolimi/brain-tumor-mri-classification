@@ -102,11 +102,11 @@ Result Display
 # ⚙️ Installation
 
 Clone the repository:
-
 ```bash
 git clone https://github.com/Dhizolimi/brain-tumor-mri-classification.git
 cd brain-tumor-mri-classification
-
+```
+```bash
 Install dependencies:
 pip install -r requirements.txt
 ```
@@ -117,7 +117,9 @@ pip install -r requirements.txt
 
 ```markdown
 streamlit run app.py
+```
 The application will run at:
+```markdown
 http://localhost:8501
 ```
 
