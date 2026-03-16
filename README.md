@@ -47,6 +47,7 @@ The system also provides **Grad-CAM visualization** to highlight the regions of 
 
 # 🏗 Project Structure
 
+```markdown
 brain-tumor-ai/
 │
 ├── app.py
@@ -76,11 +77,13 @@ brain-tumor-ai/
 │ └── UI_04.png
 │
 └── README.md
+```
 
 ---
 
 # 🔄 Inference Pipeline
 
+```markdown
 MRI Upload
     ↓
 Image Preprocessing
@@ -92,6 +95,7 @@ Softmax Prediction
 Grad-CAM Visualization
     ↓
 Result Display
+```
 
 ---
 
@@ -112,7 +116,6 @@ pip install -r requirements.txt
 # 🚀 Run App
 
 ```markdown
-```bash
 streamlit run app.py
 The application will run at:
 http://localhost:8501
@@ -143,7 +146,6 @@ Model performance is evaluated using:
 
 # 🖼 Application Preview
 
-```markdown
 **Main Interface**
 ![app interface](images/UI_01.png)
 ![app interface](images/UI_02.png)
@@ -151,7 +153,6 @@ Model performance is evaluated using:
 
 **Model Evaluation**
 ![model evaluation](images/UI_04.png)
-```
 
 ---
 
