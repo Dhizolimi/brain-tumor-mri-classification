@@ -106,8 +106,8 @@ Clone the repository:
 git clone https://github.com/Dhizolimi/brain-tumor-mri-classification.git
 cd brain-tumor-mri-classification
 ```
-```bash
 Install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
@@ -148,12 +148,12 @@ Model performance is evaluated using:
 
 # 🖼 Application Preview
 
-**Main Interface**
+## Main Interface
 ![app interface](images/UI_01.png)
 ![app interface](images/UI_02.png)
 ![app interface](images/UI_03.png)
 
-**Model Evaluation**
+## Model Evaluation
 ![model evaluation](images/UI_04.png)
 
 ---
