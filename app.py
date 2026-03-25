@@ -138,6 +138,13 @@ if page == "Tumor Analysis":
 
             st.divider()
 
+            st.info(
+                f"Model memprediksi **{tumor_type}** karena model melihat pada area-area berikut pada heatmap Grad-CAM:\n\n"
+                "- 🔴 **Area Merah:** Menunjukkan area dengan pengaruh paling tinggi (sangat penting) dalam proses prediksi model.\n"
+                "- 🟡/🟢 **Area Kuning & Hijau:** Menunjukkan area dengan pengaruh menengah.\n"
+                "- 🔵 **Area Biru:** Menunjukkan area dengan pengaruh paling rendah (kurang penting) terhadap hasil prediksi."
+            )
+
             # ---------------------------------
             # Report Generation
             # ---------------------------------

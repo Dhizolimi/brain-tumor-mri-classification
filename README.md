@@ -51,6 +51,7 @@ The system also provides **Grad-CAM visualization** to highlight the regions of 
 brain-tumor-ai/
 │
 ├── app.py
+├── packages.txt
 ├── requirements.txt
 │
 ├── model/

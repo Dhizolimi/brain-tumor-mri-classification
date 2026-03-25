@@ -68,7 +68,7 @@ def render_evaluation_page():
     # Membaca data performa prediksi aktual `densenet_evaluation_results.csv` dan merender 
     # berbagai matrik beserta visualisasinya ke dalam antarmuka UI.
     st.title("📊 Model Evaluation Metrics")
-    st.markdown("Halaman ini menampilkan metrik evaluasi aktual dari model DenseNet121 pada *test set*.")
+    st.markdown("This page displays the actual evaluation metrics of the Transfer Learning DenseNet121 model on the test set.")
     
     class_names = ["Glioma", "Meningioma", "No Tumor", "Pituitary"]
     
