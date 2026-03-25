@@ -87,6 +87,17 @@ if page == "Tumor Analysis":
         with col_upload:
             st.image(image, caption="MRI Preview", width=350)
 
+        # Inisialisasi session state untuk menyimpan hasil analisis dan nama file
+        if "analysis_results" not in st.session_state:
+            st.session_state.analysis_results = None
+        if "last_file" not in st.session_state:
+            st.session_state.last_file = None
+
+        # Reset jika file yang diunggah berubah
+        if st.session_state.last_file != uploaded_file.name:
+            st.session_state.analysis_results = None
+            st.session_state.last_file = uploaded_file.name
+
         # Tombol jalankan analisis
         if col_upload.button("Run AI Analysis"):
             with st.spinner("Running model inference..."):
@@ -102,6 +113,22 @@ if page == "Tumor Analysis":
                 except Exception as e:
                     heatmap = None
                     st.warning(f"GradCAM error: {e}")
+
+                # Simpan hasil ke session state
+                st.session_state.analysis_results = {
+                    "result": result,
+                    "confidence": confidence,
+                    "probs": probs,
+                    "heatmap": heatmap
+                }
+
+        # Jika hasil analisis sudah ada di session state, tampilkan
+        if st.session_state.analysis_results is not None:
+            res = st.session_state.analysis_results
+            result = res["result"]
+            confidence = res["confidence"]
+            probs = res["probs"]
+            heatmap = res["heatmap"]
 
             # ---------------------------------
             # Display Results (Top Right)
