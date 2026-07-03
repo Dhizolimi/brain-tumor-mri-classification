@@ -31,7 +31,7 @@ page = st.sidebar.radio("Go to", ["Tumor Analysis", "Model Evaluation"])
 st.sidebar.header("Model Information")
 st.sidebar.write("Architecture: DenseNet121 (RGB)")
 st.sidebar.write("Dataset: MRI Brain Tumor Dataset")
-st.sidebar.write("Accuracy: ~95%")
+st.sidebar.write("Accuracy: ~96%")
 
 if page == "Tumor Analysis":
     # ---------------------------------
